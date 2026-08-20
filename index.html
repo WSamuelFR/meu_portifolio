@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wesley Samuel | Desenvolvedor Full Stack Júnior</title>
+    
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Style & Game Style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/game.css">
+</head>
+<body>
+
+    <!-- Header Sticky Topo (Com Imagem Banner Meus Dados + Botões de Abas) -->
+    <header class="sticky-top header-fixed shadow-sm py-2">
+        <div class="container">
+            
+            <!-- Imagem Meus Dados (Banner no Topo do Header) -->
+            <div class="header-banner-wrapper mb-2">
+                <img src="assets/img/meus_dados.jpg" alt="Wesley Samuel Ferreira Rodrigues - Meus Dados" class="header-banner-img img-fluid">
+            </div>
+
+            <!-- Botões de Alternar Abas (Integrados no Header Fixo) -->
+            <div class="nav-tabs-wrapper max-w-650 mx-auto">
+                <ul class="nav nav-pills nav-justified gap-1 p-1 rounded-4 header-tabs-pill" id="portfolioTabs" role="tablist">
+                    
+                    <!-- ABA 1: APRESENTAÇÃO & SOLUÇÕES -->
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active py-2 px-2 rounded-3 fw-semibold d-flex align-items-center justify-content-center gap-2" 
+                                id="presentation-tab" data-bs-toggle="tab" data-bs-target="#presentation-pane" 
+                                type="button" role="tab" aria-controls="presentation-pane" aria-selected="true">
+                            <i class="fa-solid fa-user-gear fs-6"></i>
+                            <span>Apresentação & Soluções</span>
+                        </button>
+                    </li>
+
+                    <!-- ABA 2: MEUS PROJETOS & GAME -->
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link py-2 px-2 rounded-3 fw-semibold d-flex align-items-center justify-content-center gap-2" 
+                                id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-pane" 
+                                type="button" role="tab" aria-controls="projects-pane" aria-selected="false">
+                            <i class="fa-solid fa-gamepad fs-6"></i>
+                            <span>Meus Projetos & Game</span>
+                        </button>
+                    </li>
+
+                    <!-- ABA 3: CURRÍCULO -->
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link py-2 px-2 rounded-3 fw-semibold d-flex align-items-center justify-content-center gap-2" 
+                                id="curriculum-tab" data-bs-toggle="tab" data-bs-target="#curriculum-pane" 
+                                type="button" role="tab" aria-controls="curriculum-pane" aria-selected="false">
+                            <i class="fa-solid fa-file-contract fs-6"></i>
+                            <span>Currículo</span>
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper with Offset for Combined Header -->
+    <main class="main-content container py-4">
+
+        <!-- Tabs Content Panes -->
+        <div class="tab-content" id="portfolioTabsContent">
+            
+            <!-- ABA 1: APRESENTAÇÃO & SOLUÇÕES -->
+            <div class="tab-pane fade show active" id="presentation-pane" role="tabpanel" aria-labelledby="presentation-tab">
+                
+                <!-- BLOCO 1: APRESENTAÇÃO -->
+                <section class="card border-0 shadow-sm rounded-4 mb-4 custom-card">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="d-flex align-items-center gap-2 mb-3 border-bottom pb-3 section-header">
+                            <i class="fa-solid fa-id-card text-emerald fs-3"></i>
+                            <h2 class="h3 mb-0 fw-bold">APRESENTAÇÃO</h2>
+                        </div>
+                        <div class="presentation-text lead-text">
+                            <p>
+                                Desenvolvedor Full Stack Júnior e estudante de Ciência da Computação, com experiência em desenvolvimento de aplicações Web e Mobile, análise de sistemas, modelagem de dados e suporte técnico. Atuo no desenvolvimento de soluções digitais personalizadas, com experiência em PHP, Laravel, JavaScript, Vue.js, Kotlin, Java, MySQL e APIs REST, além de práticas de desenvolvimento orientadas à organização, usabilidade e responsividade.
+                            </p>
+                            <p>
+                                Possuo experiência profissional também em suporte técnico, atendimento ao usuário, diagnóstico de problemas e monitoramento de redes, o que contribuiu para desenvolver uma visão prática sobre tecnologia e sobre as necessidades dos usuários e das empresas. Como desenvolvedor autônomo, atuo na criação e evolução de sistemas administrativos, desde a análise e modelagem da solução até o desenvolvimento, manutenção e suporte.
+                            </p>
+                            <p class="mb-0">
+                                Busco aplicar meus conhecimentos técnicos e minha experiência prática na criação de soluções eficientes, funcionais e alinhadas às necessidades do negócio, contribuindo para o desenvolvimento de produtos e processos cada vez mais eficientes.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BLOCO 2: COMERCIAL: SOLUÇÕES DIGITAIS -->
+                <section class="card border-0 shadow-sm rounded-4 mb-4 custom-card">
+                    <div class="card-body p-4 p-md-5">
+                        
+                        <div class="text-center mb-5">
+                            <h2 class="display-6 fw-extrabold text-gradient mb-3">SOLUÇÕES DIGITAIS PARA O SEU NEGÓCIO</h2>
+                            <p class="lead text-muted max-w-700 mx-auto">
+                                Sua empresa ainda depende de planilhas, processos manuais ou sistemas que não atendem completamente às suas necessidades?
+                            </p>
+                            <p class="lead fw-medium text-main">
+                                Desenvolvo <strong>soluções digitais personalizadas para empresas</strong>, com foco em organização, automação e eficiência. O objetivo é transformar as necessidades do seu negócio em sistemas simples de utilizar, seguros e adaptados à sua realidade.
+                            </p>
+                        </div>
+
+                        <!-- Cards Grid for Services -->
+                        <div class="row g-4 mb-5">
+                            
+                            <!-- Card 1: ERP -->
+                            <div class="col-md-6 col-lg-6">
+                                <div class="solution-card p-4 rounded-4 h-100 border">
+                                    <div class="solution-icon mb-3">
+                                        <i class="fa-solid fa-laptop-code text-emerald fs-2"></i>
+                                    </div>
+                                    <h3 class="h4 fw-bold mb-3">💻 Sistemas ERP e Sistemas Administrativos</h3>
+                                    <p class="text-muted mb-3">
+                                        Desenvolvimento de sistemas personalizados para <strong>gerenciamento e automação de processos empresariais</strong>, permitindo centralizar informações e facilitar a rotina da sua equipe.
+                                    </p>
+                                    <p class="fw-semibold text-main mb-2">Possibilidade de desenvolver soluções para:</p>
+                                    <ul class="solution-list text-muted small ps-3 mb-3">
+                                        <li>Gestão de clientes e funcionários;</li>
+                                        <li>Controle financeiro e fluxo de caixa;</li>
+                                        <li>Controle de estoque e produtos;</li>
+                                        <li>Ordens de serviço;</li>
+                                        <li>Agendamentos e reservas;</li>
+                                        <li>Relatórios e dashboards;</li>
+                                        <li>Controle de usuários e permissões;</li>
+                                        <li>Processos internos personalizados;</li>
+                                        <li>Integração com APIs e outros serviços.</li>
+                                    </ul>
+                                    <p class="small text-emerald fw-medium border-top pt-2 mb-0">
+                                        Cada sistema é desenvolvido de acordo com as necessidades da empresa, evitando recursos desnecessários e priorizando aquilo que realmente facilita o trabalho.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Sites Web -->
+                            <div class="col-md-6 col-lg-6">
+                                <div class="solution-card p-4 rounded-4 h-100 border">
+                                    <div class="solution-icon mb-3">
+                                        <i class="fa-solid fa-globe text-emerald fs-2"></i>
+                                    </div>
+                                    <h3 class="h4 fw-bold mb-3">🌐 Desenvolvimento de Sites e Sistemas Web</h3>
+                                    <p class="text-muted mb-3">
+                                        Criação de <strong>sites institucionais, sistemas web e plataformas administrativas responsivas</strong>, desenvolvidos para funcionar em computadores, tablets e celulares.
+                                    </p>
+                                    <p class="fw-semibold text-main mb-2">O projeto pode incluir:</p>
+                                    <ul class="solution-list text-muted small ps-3 mb-0">
+                                        <li>Site institucional;</li>
+                                        <li>Página comercial;</li>
+                                        <li>Sistemas de gerenciamento;</li>
+                                        <li>Painéis administrativos;</li>
+                                        <li>Áreas restritas para usuários;</li>
+                                        <li>Formulários e integrações;</li>
+                                        <li>Interfaces modernas e responsivas;</li>
+                                        <li>Integração com bancos de dados e APIs.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Banco de Dados -->
+                            <div class="col-md-6 col-lg-6">
+                                <div class="solution-card p-4 rounded-4 h-100 border">
+                                    <div class="solution-icon mb-3">
+                                        <i class="fa-solid fa-database text-emerald fs-2"></i>
+                                    </div>
+                                    <h3 class="h4 fw-bold mb-3">🗄️ Bancos de Dados</h3>
+                                    <p class="text-muted mb-3">
+                                        Estruturação e organização de <strong>bancos de dados relacionais</strong>, garantindo que as informações da empresa sejam armazenadas de forma organizada e eficiente.
+                                    </p>
+                                    <p class="fw-semibold text-main mb-2">Os serviços podem envolver:</p>
+                                    <ul class="solution-list text-muted small ps-3 mb-0">
+                                        <li>Modelagem de dados;</li>
+                                        <li>Criação e estruturação de bancos de dados;</li>
+                                        <li>Relacionamento entre informações;</li>
+                                        <li>Otimização de consultas;</li>
+                                        <li>Organização de dados existentes;</li>
+                                        <li>Integração entre sistemas e bancos de dados;</li>
+                                        <li>Desenvolvimento de soluções utilizando MySQL e SQL.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Card 4: Dev Personalizado -->
+                            <div class="col-md-6 col-lg-6">
+                                <div class="solution-card p-4 rounded-4 h-100 border">
+                                    <div class="solution-icon mb-3">
+                                        <i class="fa-solid fa-gears text-emerald fs-2"></i>
+                                    </div>
+                                    <h3 class="h4 fw-bold mb-3">⚙️ Desenvolvimento Personalizado</h3>
+                                    <p class="text-muted mb-3">
+                                        Cada empresa possui processos diferentes. Por isso, o desenvolvimento pode ser planejado desde a <strong>análise da necessidade até a implementação da solução</strong>.
+                                    </p>
+                                    <p class="text-muted small mb-3">
+                                        Atuo com tecnologias como <strong>PHP, Laravel, JavaScript, Vue.js, Kotlin, Java, Python, MySQL, APIs REST e Bootstrap</strong>, utilizando ferramentas e padrões modernos de desenvolvimento.
+                                    </p>
+                                    <p class="text-muted small mb-0">
+                                        Além do desenvolvimento, também ofereço <strong>suporte e manutenção</strong>, auxiliando na identificação de problemas, correção de erros e evolução das soluções conforme o negócio cresce.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- CTA Box -->
+                        <div class="cta-banner p-4 p-md-5 rounded-4 text-center text-white">
+                            <h3 class="h3 fw-bold mb-3">🚀 Transforme processos em soluções digitais</h3>
+                            <p class="lead mb-4 max-w-700 mx-auto">
+                                Se sua empresa precisa de um <strong>ERP, sistema administrativo, site, banco de dados ou uma solução personalizada</strong>, podemos desenvolver uma ferramenta pensada especificamente para o seu negócio.
+                            </p>
+                            <p class="fs-5 fw-bold mb-0">
+                                Conte-me o que sua empresa precisa e vamos transformar sua ideia em uma solução digital.
+                            </p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- BLOCO 3: REDES SOCIAIS -->
+                <section class="card border-0 shadow-sm rounded-4 custom-card">
+                    <div class="card-body p-4 p-md-5 text-center">
+                        <h3 class="h4 fw-bold mb-4">MINHAS REDES SOCIAIS & CONTATO</h3>
+                        <p class="text-muted mb-4">Conecte-se comigo através das redes abaixo:</p>
+                        
+                        <div class="d-flex flex-wrap justify-content-center gap-3 social-icons-grid">
+                            <a href="" target="_blank" class="social-expand-icon btn btn-outline-primary p-3 rounded-circle" title="LinkedIn">
+                                <i class="fa-brands fa-linkedin fs-2"></i>
+                            </a>
+                            <a href="" target="_blank" class="social-expand-icon btn btn-outline-dark p-3 rounded-circle" title="GitHub">
+                                <i class="fa-brands fa-github fs-2"></i>
+                            </a>
+                            <a href="" target="_blank" class="social-expand-icon btn btn-outline-danger p-3 rounded-circle" title="Instagram">
+                                <i class="fa-brands fa-instagram fs-2"></i>
+                            </a>
+                            <a href="" target="_blank" class="social-expand-icon btn btn-outline-success p-3 rounded-circle" title="WhatsApp">
+                                <i class="fa-brands fa-whatsapp fs-2"></i>
+                            </a>
+                            <a href="" target="_blank" class="social-expand-icon btn btn-outline-secondary p-3 rounded-circle" title="E-mail">
+                                <i class="fa-solid fa-envelope fs-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- ABA 2: MEUS PROJETOS & GAME INTERATIVO -->
+            <div class="tab-pane fade" id="projects-pane" role="tabpanel" aria-labelledby="projects-tab">
+                
+                <!-- BLOCO 1: GAME TELHADO FELINO -->
+                <section class="card border-0 shadow-sm rounded-4 mb-4 custom-card game-container-card">
+                    <div class="card-body p-4 p-md-5">
+                        
+                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3 border-bottom pb-3 section-header">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-cat text-emerald fs-2"></i>
+                                <div>
+                                    <h2 class="h3 mb-0 fw-bold">TELHADO FELINO (GAME RUNNER)</h2>
+                                    <p class="small text-muted mb-0">Projeto Canvas em JavaScript Puro rodando em tempo real no seu navegador!</p>
+                                </div>
+                            </div>
+                            <span class="badge bg-emerald px-3 py-2 rounded-pill fw-bold">60 FPS Endless Runner</span>
+                        </div>
+
+                        <!-- Canvas Wrapper -->
+                        <div class="game-canvas-wrapper my-4">
+                            
+                            <!-- HUD Header -->
+                            <div class="game-hud">
+                                <div class="hud-lives" id="hudLivesContainer">
+                                    <!-- Dynamic Hearts -->
+                                </div>
+                                <div class="hud-score-box d-flex align-items-center gap-3">
+                                    <div>
+                                        SCORE: <span class="hud-score-num" id="hudScoreNum">0</span> | VELOCIDADE: <span class="hud-score-num" id="hudSpeedNum">1.0x</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light rounded-circle hud-sound-btn" id="hudSoundBtn" title="Ativar/Desativar Som">
+                                        <i class="fa-solid fa-volume-high"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Overlay Screens (Start / GameOver) -->
+                            <div class="game-overlay-screen" id="gameOverlayScreen">
+                                <h3 class="game-title-text" id="overlayTitle">TELHADO FELINO</h3>
+                                <div class="mb-4 text-center max-w-700" id="overlayMessage">
+                                    <p class="lead mb-2">Ajude o gato a correr pelos telhados da cidade!</p>
+                                    <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+                                        <span class="game-instruction-badge"><i class="fa-solid fa-heart me-1 text-danger"></i> 7 Vidas</span>
+                                        <span class="game-instruction-badge"><i class="fa-solid fa-bolt me-1 text-warning"></i> +Velocidade a cada 500pts</span>
+                                        <span class="game-instruction-badge"><i class="fa-solid fa-dove me-1 text-info"></i> Pombo = +1 Vida</span>
+                                    </div>
+                                    <p class="small text-muted mb-0">Evite antenas (📡), chaminés (🏭), falcões (🦅) e cobras (🐍). Não caia nos vãos dos prédios!</p>
+                                </div>
+
+                                <div class="d-flex flex-column align-items-center gap-3">
+                                    <button class="btn btn-emerald btn-lg px-5 py-3 rounded-pill fw-bold shadow hover-lift" id="startGameBtn">
+                                        <i class="fa-solid fa-play me-2"></i> INICIAR JOGO
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-light rounded-pill px-4 py-2 opacity-85" id="overlaySoundBtn">
+                                        <i class="fa-solid fa-volume-high me-2" id="overlaySoundIcon"></i> <span id="overlaySoundText">SOM: LIGADO</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Game Canvas -->
+                            <canvas id="gameCanvas"></canvas>
+                        </div>
+
+                        <!-- Touch / Mobile Jump Control -->
+                        <div class="text-center mobile-jump-btn mt-3">
+                            <button class="btn btn-emerald btn-lg w-100 py-3 rounded-4 fw-bold fs-4" id="mobileJumpBtn">
+                                <i class="fa-solid fa-arrow-up me-2"></i> TOCAR PARA PULAR
+                            </button>
+                        </div>
+
+                        <!-- Game Controls Footer Legend -->
+                        <div class="p-3 rounded-3 bg-subtle border d-flex align-items-center justify-content-between flex-wrap gap-2 mt-3 small">
+                            <div>
+                                <strong>Controles Computador:</strong> Pressione <kbd>Espaço</kbd>, <kbd>Seta Cima</kbd> ou <kbd>W</kbd> para Pular / Pulo Duplo.
+                            </div>
+                            <div>
+                                <strong>Controles Celular:</strong> Toque em qualquer área do jogo ou no botão de pulo.
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- BLOCO 2: VITRINE DE PROJETOS COM MODAIS E CARROSSÉIS -->
+                <section class="card border-0 shadow-sm rounded-4 custom-card">
+                    <div class="card-body p-4 p-md-5">
+                        
+                        <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-3 section-header">
+                            <i class="fa-solid fa-cubes text-emerald fs-3"></i>
+                            <div>
+                                <h2 class="h3 mb-0 fw-bold">PROJETOS & ESTUDOS DE CASO</h2>
+                                <p class="small text-muted mb-0">Clique em qualquer projeto para abrir o modal com o vídeo/galeria de fotos e a documentação completa!</p>
+                            </div>
+                        </div>
+
+                        <!-- Project Cards Grid -->
+                        <div class="row g-4">
+                            
+                            <!-- Card Destaque Principal: WS-Hotelaria (col-12) -->
+                            <div class="col-12">
+                                <div class="project-featured-card p-0 rounded-4 overflow-hidden border" data-bs-toggle="modal" data-bs-target="#modalWsHotelaria">
+                                    <div class="row g-0 align-items-stretch">
+                                        <div class="col-md-5 col-lg-5 position-relative bg-subtle">
+                                            <div class="gif-media-container h-100 min-h-250">
+                                                <video autoplay loop muted playsinline class="w-100 h-100 object-fit-cover">
+                                                    <source src="assets/video/wshotelaria.mp4" type="video/mp4">
+                                                </video>
+                                                <span class="gif-hover-badge"><i class="fa-solid fa-circle-play me-1"></i> Vídeo de Demonstração</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 col-lg-7 p-4 p-md-5 d-flex flex-column justify-content-between">
+                                            <div>
+                                                <div class="d-flex align-items-center gap-2 mb-2">
+                                                    <span class="badge bg-emerald text-white px-3 py-1 rounded-pill fw-bold">PROJETO EM PRODUÇÃO & DESTAQUE</span>
+                                                </div>
+                                                <h3 class="display-6 fw-bold mb-2">WS-Hotelaria</h3>
+                                                <p class="lead text-muted mb-3">
+                                                    ERP funcional em produção há quase 1 ano para gestão hoteleira, desenvolvido sob medida para a pousada familiar com mais de 200 cadastros ativos.
+                                                </p>
+                                            </div>
+                                            <div class="pt-3 border-top d-flex flex-wrap gap-2 align-items-center justify-content-between">
+                                                <div class="d-flex gap-1 flex-wrap">
+                                                    <span class="badge badge-tech">PHP 8</span>
+                                                    <span class="badge badge-tech">MySQL</span>
+                                                    <span class="badge badge-tech">Bootstrap 5</span>
+                                                    <span class="badge badge-tech">JavaScript</span>
+                                                </div>
+                                                <span class="text-emerald fw-bold fs-6"><i class="fa-solid fa-circle-play me-1"></i> Ver Vídeo & Estudo de Caso</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: feel.it (Imagem Única) -->
+                            <div class="col-md-6 col-lg-6">
+                                <div class="project-gif-card h-100" data-bs-toggle="modal" data-bs-target="#modalFeelIt">
+                                    <div class="gif-media-container">
+                                        <img src="assets/img/projects/feel.it/Screenshot_20260528-210632_Chrome.png" alt="feel.it Preview">
+                                        <span class="gif-hover-badge"><i class="fa-solid fa-image me-1"></i> Imagem do Projeto</span>
+                                    </div>
+                                    <div class="p-4 d-flex flex-column flex-grow-1">
+                                        <h3 class="h4 fw-bold mb-2">feel.it</h3>
+                                        <p class="small text-muted mb-3">
+                                            Rede social fullstack focada em expressão emocional com SPA Vue 3, Node.js, TypeScript e Prisma.
+                                        </p>
+                                        <div class="mt-auto d-flex flex-wrap gap-2 align-items-center justify-content-between pt-2 border-top">
+                                            <div class="d-flex gap-1 flex-wrap">
+                                                <span class="badge badge-tech">Vue 3</span>
+                                                <span class="badge badge-tech">Node.js</span>
+                                                <span class="badge badge-tech">TypeScript</span>
+                                            </div>
+                                            <span class="text-emerald fw-bold small"><i class="fa-solid fa-eye me-1"></i> Ver Estudo de Caso</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: PayGuardian (Carrossel Modal) -->
+                            <div class="col-md-6 col-lg-6">
+                                <div class="project-gif-card h-100" data-bs-toggle="modal" data-bs-target="#modalPayGuardian">
+                                    <div class="gif-media-container">
+                                        <img src="assets/img/projects/payguardian/tela2.png" alt="PayGuardian Preview">
+                                        <span class="gif-hover-badge"><i class="fa-solid fa-images me-1"></i> Galeria de Fotos</span>
+                                    </div>
+                                    <div class="p-4 d-flex flex-column flex-grow-1">
+                                        <h3 class="h4 fw-bold mb-2">PayGuardian</h3>
+                                        <p class="small text-muted mb-3">
+                                            Sistema de gestão financeira pessoal nativo em Kotlin e Android Studio com monitorização de capital.
+                                        </p>
+                                        <div class="mt-auto d-flex flex-wrap gap-2 align-items-center justify-content-between pt-2 border-top">
+                                            <div class="d-flex gap-1 flex-wrap">
+                                                <span class="badge badge-tech">Kotlin</span>
+                                                <span class="badge badge-tech">Android</span>
+                                                <span class="badge badge-tech">Jetpack Compose</span>
+                                            </div>
+                                            <span class="text-emerald fw-bold small"><i class="fa-solid fa-eye me-1"></i> Ver Estudo de Caso</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 4: Movie Analytics Pro (Carrossel Modal) -->
+                            <div class="col-md-6 col-lg-6">
+                                <div class="project-gif-card h-100" data-bs-toggle="modal" data-bs-target="#modalMovieAnalytics">
+                                    <div class="gif-media-container">
+                                        <img src="assets/img/projects/movies/print_main.png" alt="Movie Analytics Pro Preview">
+                                        <span class="gif-hover-badge"><i class="fa-solid fa-images me-1"></i> Galeria de Fotos</span>
+                                    </div>
+                                    <div class="p-4 d-flex flex-column flex-grow-1">
+                                        <h3 class="h4 fw-bold mb-2">Movie Analytics Pro</h3>
+                                        <p class="small text-muted mb-3">
+                                            Evolução de projeto acadêmico para Data Science e Machine Learning em Python, Pandas, KNN e Árvore de Decisão.
+                                        </p>
+                                        <div class="mt-auto d-flex flex-wrap gap-2 align-items-center justify-content-between pt-2 border-top">
+                                            <div class="d-flex gap-1 flex-wrap">
+                                                <span class="badge badge-tech">Python</span>
+                                                <span class="badge badge-tech">Pandas</span>
+                                                <span class="badge badge-tech">Data Science</span>
+                                            </div>
+                                            <span class="text-emerald fw-bold small"><i class="fa-solid fa-eye me-1"></i> Ver Estudo de Caso</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 5: Projeto Memorize (Carrossel Modal) -->
+                            <div class="col-md-6 col-lg-6">
+                                <div class="project-gif-card h-100" data-bs-toggle="modal" data-bs-target="#modalMemorize">
+                                    <div class="gif-media-container">
+                                        <img src="assets/img/projects/projeto_memorize/inicio_java.jfif" alt="Projeto Memorize Preview">
+                                        <span class="gif-hover-badge"><i class="fa-solid fa-images me-1"></i> Galeria de Fotos</span>
+                                    </div>
+                                    <div class="p-4 d-flex flex-column flex-grow-1">
+                                        <h3 class="h4 fw-bold mb-2">Projeto Memorize</h3>
+                                        <p class="small text-muted mb-3">
+                                            Aplicação desktop Windows em Java SE e Swing para memorização com flashcards e Orientação a Objetos.
+                                        </p>
+                                        <div class="mt-auto d-flex flex-wrap gap-2 align-items-center justify-content-between pt-2 border-top">
+                                            <div class="d-flex gap-1 flex-wrap">
+                                                <span class="badge badge-tech">Java SE</span>
+                                                <span class="badge badge-tech">Swing</span>
+                                                <span class="badge badge-tech">POO</span>
+                                            </div>
+                                            <span class="text-emerald fw-bold small"><i class="fa-solid fa-eye me-1"></i> Ver Estudo de Caso</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- ABA 3: CURRÍCULO -->
+            <div class="tab-pane fade" id="curriculum-pane" role="tabpanel" aria-labelledby="curriculum-tab">
+                
+                <!-- BLOCO 1: COMPETÊNCIAS TÉCNICAS -->
+                <section class="card border-0 shadow-sm rounded-4 mb-4 custom-card">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-3 section-header">
+                            <i class="fa-solid fa-screwdriver-wrench text-emerald fs-3"></i>
+                            <h2 class="h3 mb-0 fw-bold">COMPETÊNCIAS TÉCNICAS</h2>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="p-3 rounded-3 bg-subtle border">
+                                    <h4 class="h6 fw-bold text-emerald text-uppercase mb-2"><i class="fa-solid fa-code me-2"></i>Linguagens e Tecnologias</h4>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge badge-tech">PHP</span>
+                                        <span class="badge badge-tech">JavaScript</span>
+                                        <span class="badge badge-tech">Kotlin</span>
+                                        <span class="badge badge-tech">Java</span>
+                                        <span class="badge badge-tech">Python</span>
+                                        <span class="badge badge-tech">CSS</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="p-3 rounded-3 bg-subtle border">
+                                    <h4 class="h6 fw-bold text-emerald text-uppercase mb-2"><i class="fa-solid fa-layer-group me-2"></i>Frameworks</h4>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge badge-tech">Laravel</span>
+                                        <span class="badge badge-tech">Vue.js</span>
+                                        <span class="badge badge-tech">Electron.js</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="p-3 rounded-3 bg-subtle border">
+                                    <h4 class="h6 fw-bold text-emerald text-uppercase mb-2"><i class="fa-solid fa-toolbox me-2"></i>Ferramentas e Padrões</h4>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge badge-tech">Git</span>
+                                        <span class="badge badge-tech">API REST</span>
+                                        <span class="badge badge-tech">MySQL</span>
+                                        <span class="badge badge-tech">Bootstrap 5</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="p-3 rounded-3 bg-subtle border">
+                                    <h4 class="h6 fw-bold text-emerald text-uppercase mb-2"><i class="fa-solid fa-diagram-project me-2"></i>Áreas de Especialidade</h4>
+                                    <p class="small text-muted mb-0">
+                                        Análise de Sistemas, Arquitetura de aplicações Mobile e Web, Modelagem de dados, Experiência do usuário.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="p-3 rounded-3 bg-subtle border">
+                                    <h4 class="h6 fw-bold text-emerald text-uppercase mb-2"><i class="fa-solid fa-headset me-2"></i>Suporte e Atendimento</h4>
+                                    <p class="small text-muted mb-0">
+                                        Suporte Técnico (N1/N2), Gestão de Chamados (Ticketing), Diagnóstico de Problemas de Rede, Atendimento Presencial ao Usuário.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BLOCO 2: EXPERIÊNCIA PROFISSIONAL -->
+                <section class="card border-0 shadow-sm rounded-4 mb-4 custom-card">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-3 section-header">
+                            <i class="fa-solid fa-briefcase text-emerald fs-3"></i>
+                            <h2 class="h3 mb-0 fw-bold">EXPERIÊNCIA PROFISSIONAL</h2>
+                        </div>
+
+                        <div class="timeline">
+                            
+                            <!-- Exp 1 -->
+                            <div class="timeline-item pb-4 border-start ps-4 position-relative">
+                                <div class="timeline-badge bg-emerald"></div>
+                                <h3 class="h5 fw-bold mb-1">Desenvolvedor Júnior Autônomo (Freelancer | Projetos Próprios)</h3>
+                                <p class="small text-muted mb-2">João Pessoa, Paraíba, Brasil | Fevereiro de 2023 – Atual</p>
+                                <ul class="small text-muted ps-3 mb-0">
+                                    <li>Criação de soluções digitais completas com foco em sistemas administrativos, modelagem de dados e interfaces responsivas.</li>
+                                    <li>Responsável pela modelagem de dados, estruturação de banco de dados e análise de sistemas em projetos próprios.</li>
+                                    <li>Suporte técnico contínuo a clientes, garantindo a usabilidade das soluções desenvolvidas e resolução de dúvidas e erros.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Exp 2 -->
+                            <div class="timeline-item pb-4 border-start ps-4 position-relative">
+                                <div class="timeline-badge bg-emerald"></div>
+                                <h3 class="h5 fw-bold mb-1">Estagiário em operações | Tely</h3>
+                                <p class="small text-muted mb-2">João Pessoa, Paraíba, Brasil | Fevereiro de 2025 – Janeiro de 2026 (1 ano)</p>
+                                <ul class="small text-muted ps-3 mb-0">
+                                    <li>Atuação na central de operações com foco em análise e monitoramento de redes.</li>
+                                    <li>Prestação de atendimento e suporte técnico, auxiliando na identificação e resolução de problemas de conectividade.</li>
+                                    <li>Apoio em processos internos para garantir a estabilidade dos serviços.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Exp 3 -->
+                            <div class="timeline-item border-start ps-4 position-relative">
+                                <div class="timeline-badge bg-emerald"></div>
+                                <h3 class="h5 fw-bold mb-1">Analista de Sistemas e Suporte Técnico | Hotel da Serra</h3>
+                                <p class="small text-muted mb-2">Teixeira, Paraíba, Brasil | Fevereiro de 2021 – Novembro de 2022 (1 ano e 10 meses)</p>
+                                <ul class="small text-muted ps-3 mb-0">
+                                    <li>Desenvolvimento e manutenção de programa ERP próprio; Suporte técnico presencial e remoto a funcionários e clientes.</li>
+                                    <li>Diagnóstico e resolução de incidentes sistêmicos; Registro e acompanhamento de ocorrências.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BLOCO 3: FORMAÇÃO ACADÊMICA E CERTIFICAÇÕES -->
+                <section class="card border-0 shadow-sm rounded-4 mb-4 custom-card">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="d-flex align-items-center gap-2 mb-4 border-bottom pb-3 section-header">
+                            <i class="fa-solid fa-graduation-cap text-emerald fs-3"></i>
+                            <h2 class="h3 mb-0 fw-bold">FORMAÇÃO ACADÊMICA E CERTIFICAÇÕES</h2>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="p-4 rounded-4 bg-subtle border h-100">
+                                    <h3 class="h5 fw-bold mb-1">FPB: FACULDADE INTERNACIONAL DA PARAÍBA</h3>
+                                    <p class="text-emerald fw-semibold mb-2">Bacharelado, CIÊNCIA DA COMPUTAÇÃO</p>
+                                    <p class="small text-muted mb-0">Fevereiro de 2023 – Dezembro de 2026</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="p-4 rounded-4 bg-subtle border h-100">
+                                    <h3 class="h5 fw-bold mb-3">Certificações e Cursos Complementares</h3>
+                                    <ul class="small text-muted ps-3 mb-0">
+                                        <li class="mb-2">Desenvolvimento Web Compacto e Completo (Udemy Cursos Online)</li>
+                                        <li class="mb-2">Java Completo - Programação Orientada a Objetos + Projetos (Nélio Alves) (Udemy Cursos Online)</li>
+                                        <li class="mb-2">Banco de Dados e SQL (Felipe Mafra) (Udemy Cursos Online)</li>
+                                        <li class="mb-0">Arquitetura de Redes (Gabriel Torres) (Udemy Cursos Online)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- BOTÃO BAIXAR CURRÍCULO -->
+                <section class="text-center py-3">
+                    <a href="assets/docs/curriculo_samuel.pdf" download="Curriculo_Wesley_Samuel.pdf" target="_blank" class="btn btn-emerald btn-lg px-5 py-3 rounded-pill fw-bold shadow hover-lift">
+                        <i class="fa-solid fa-file-pdf me-2 fs-4"></i> Baixar Currículo em PDF
+                    </a>
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ========================================================================= -->
+    <!-- MODAIS DE ESTUDO DE CASO DOS PROJETOS                                     -->
+    <!-- ========================================================================= -->
+
+    <!-- MODAL 1: WS-HOTELARIA (VÍDEO DE DEMONSTRAÇÃO) -->
+    <div class="modal fade" id="modalWsHotelaria" tabindex="-1" aria-labelledby="modalWsHotelariaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content border-0">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold text-emerald" id="modalWsHotelariaLabel">
+                        <i class="fa-solid fa-hotel me-2"></i> WS-Hotelaria — Meu Primeiro ERP Funcional
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-4">
+                    
+                    <!-- Player de Vídeo HTML5 -->
+                    <video controls class="modal-project-video mb-4">
+                        <source src="assets/video/wshotelaria.mp4" type="video/mp4">
+                        Seu navegador não suporta reprodução de vídeos.
+                    </video>
+
+                    <div class="project-details-text">
+                        <p class="lead fw-semibold">
+                            A WS-Hotelaria representa a realização de um dos meus principais objetivos como desenvolvedor: criar um ERP completo e funcional para gestão hoteleira, inicialmente desenvolvido para atender às necessidades da pousada da minha família.
+                        </p>
+                        <p>
+                            Meus pais sempre utilizaram métodos tradicionais de gestão, como agendas, cadernos e registros manuais. Desde o início da minha graduação em Ciência da Computação, surgiu o objetivo de desenvolver um sistema que pudesse centralizar informações, facilitar processos e melhorar a gestão da pousada, além de me permitir aplicar na prática os conhecimentos adquiridos durante a faculdade.
+                        </p>
+                        <p>
+                            Ao longo desse processo, desenvolvi diversas versões do sistema, muitas delas incompletas e com limitações. Essas experiências foram importantes para minha evolução como desenvolvedor e contribuíram para chegar à versão atual.
+                        </p>
+                        <p class="fw-bold text-emerald">
+                            Hoje, o sistema está em produção há quase um ano, sendo utilizado diariamente pela equipe da pousada e contando com mais de 200 cadastros.
+                        </p>
+                        <p>
+                            Além do desenvolvimento, continuo responsável pela manutenção, atualização e suporte técnico, implementando novas funcionalidades e realizando melhorias conforme as necessidades dos usuários. A equipe também recebeu treinamento para utilização do sistema, e alguns funcionários passaram a demonstrar maior interesse por informática e tecnologia.
+                        </p>
+                        
+                        <h4 class="h5 fw-bold text-emerald mt-4 mb-3"><i class="fa-solid fa-code me-2"></i> Tecnologias e Funcionalidades</h4>
+                        <p>
+                            A versão atual do WS-Hotelaria foi desenvolvida utilizando <strong>PHP puro, banco de dados SQL, além de JavaScript, Bootstrap, HTML5 e CSS3</strong>.
+                        </p>
+                        <p class="mb-2 fw-semibold">Entre as principais funcionalidades estão:</p>
+                        <ul class="mb-4">
+                            <li>Cadastro e gerenciamento de hóspedes e funcionários;</li>
+                            <li>Controle de níveis de acesso;</li>
+                            <li>Gestão de reservas;</li>
+                            <li>Check-in e check-out;</li>
+                            <li>Registro de vendas de produtos;</li>
+                            <li>Sistema de logs e histórico de atividades;</li>
+                            <li>Área financeira;</li>
+                            <li>Centralização das informações da pousada.</li>
+                        </ul>
+                        
+                        <p>
+                            O WS-Hotelaria deixou de ser apenas um projeto pessoal e se tornou uma solução real utilizada em produção, proporcionando experiência prática com desenvolvimento, banco de dados, controle de acesso, manutenção e suporte a usuários.
+                        </p>
+                        <p>
+                            Atualmente, meu próximo objetivo é desenvolver uma nova versão do ERP utilizando <strong>Laravel e Vue.js</strong>, com uma arquitetura SaaS multi-tenant, permitindo maior escalabilidade, organização e segurança para atender diferentes empresas.
+                        </p>
+                        <p class="mb-0 text-muted fst-italic">
+                            "O que começou como um projeto para ajudar minha família se tornou uma das experiências mais importantes da minha trajetória como desenvolvedor, unindo aprendizado acadêmico, desenvolvimento profissional e uma aplicação real em um negócio."
+                        </p>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: FEEL.IT (IMAGEM ÚNICA) -->
+    <div class="modal fade" id="modalFeelIt" tabindex="-1" aria-labelledby="modalFeelItLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content border-0">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold text-emerald" id="modalFeelItLabel">
+                        <i class="fa-solid fa-heart-pulse me-2"></i> feel.it — Rede Social de Expressão Emocional
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-4">
+                    
+                    <!-- Imagem Única do Projeto feel.it -->
+                    <div class="text-center mb-4 bg-subtle p-2 rounded-3 border">
+                        <img src="assets/img/projects/feel.it/Screenshot_20260528-210632_Chrome.png" class="img-fluid modal-project-img" alt="feel.it Preview">
+                    </div>
+
+                    <div class="project-details-text">
+                        <p class="lead">
+                            <strong>feel.it</strong> é uma rede social focada em expressão emocional. Os usuários publicam <em>feelings</em> (sentimentos), interagem com curtidas e comentários, formam clãs (grupos temáticos), adicionam amigos e recebem notificações em tempo real.
+                        </p>
+                        <p>
+                            O projeto é <strong>fullstack</strong>, com frontend SPA em <strong>Vue 3 + Vite</strong> e backend REST API em <strong>Node.js + Express + TypeScript</strong>, persistindo dados em <strong>SQLite via Prisma ORM</strong>.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 3: PAYGUARDIAN (CARROSSEL DE FOTOS) -->
+    <div class="modal fade" id="modalPayGuardian" tabindex="-1" aria-labelledby="modalPayGuardianLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content border-0">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold text-emerald" id="modalPayGuardianLabel">
+                        <i class="fa-solid fa-shield-halved me-2"></i> PayGuardian — Gestão Financeira Pessoal Mobile
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-4">
+                    
+                    <!-- Carrossel de Fotos Bootstrap -->
+                    <div id="carouselPayGuardian" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselPayGuardian" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselPayGuardian" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        </div>
+                        <div class="carousel-inner rounded-3">
+                            <div class="carousel-item active">
+                                <img src="assets/img/projects/payguardian/tela2.png" class="d-block w-100 modal-carousel-img" alt="PayGuardian Tela 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/projects/payguardian/tela3.png" class="d-block w-100 modal-carousel-img" alt="PayGuardian Tela 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPayGuardian" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselPayGuardian" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+
+                    <div class="project-details-text">
+                        <p class="lead">
+                            O <strong>PayGuardian</strong> é um sistema de gestão financeira pessoal focado no registo e monitorização de entradas de capital. Este projeto foi desenvolvido como parte dos meus estudos iniciais na linguagem <strong>Kotlin e no ambiente Android Studio</strong>, aplicando conceitos de arquitetura moderna e persistência de dados.
+                        </p>
+                        <p>
+                            Apesar de possuir experiência prévia com Java SE e preferência atual por tecnologias Web (JS e PHP), este projeto serviu para aprofundar conhecimentos no ecossistema mobile nativo.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 4: MOVIE ANALYTICS PRO (CARROSSEL DE FOTOS) -->
+    <div class="modal fade" id="modalMovieAnalytics" tabindex="-1" aria-labelledby="modalMovieAnalyticsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content border-0">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold text-emerald" id="modalMovieAnalyticsLabel">
+                        <i class="fa-solid fa-chart-line me-2"></i> Movie Analytics Pro — Análise de Dados & IA
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-4">
+                    
+                    <!-- Carrossel de Fotos Bootstrap -->
+                    <div id="carouselMovieAnalytics" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselMovieAnalytics" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselMovieAnalytics" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselMovieAnalytics" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner rounded-3">
+                            <div class="carousel-item active">
+                                <img src="assets/img/projects/movies/print_main.png" class="d-block w-100 modal-carousel-img" alt="Movie Analytics Print Main">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/projects/movies/print_graficos.png" class="d-block w-100 modal-carousel-img" alt="Movie Analytics Print Gráficos">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/projects/movies/print_predicao.png" class="d-block w-100 modal-carousel-img" alt="Movie Analytics Print Predição">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMovieAnalytics" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselMovieAnalytics" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+
+                    <div class="project-details-text">
+                        <p class="lead">
+                            Este repositório documenta a evolução técnica de um projeto de análise de dados e Inteligência Artificial, originalmente concebido em um ambiente acadêmico e agora modernizado para padrões profissionais de Data Science.
+                        </p>
+                        <h4 class="h5 fw-bold text-emerald mt-4 mb-2"><i class="fa-solid fa-graduation-cap me-2"></i> A Origem do Projeto</h4>
+                        <p>
+                            Em 2024, durante um trabalho acadêmico, aceitei o desafio de construir um sistema de Machine Learning utilizando PHP. O objetivo era processar um dataset de filmes para realizar predições através de algoritmos de KNN e Árvore de Decisão, além de gerar visualizações estatísticas.
+                        </p>
+                        <p>
+                            Na época, embora o PHP apresentasse limitações severas para o cálculo computacional intensivo e manipulação de matrizes, a implementação serviu como uma prova de conceito fundamental para entender a lógica por trás dos algoritmos.
+                        </p>
+                        <h4 class="h5 fw-bold text-emerald mt-4 mb-2"><i class="fa-brands fa-python me-2"></i> A Modernização: Python & Pandas</h4>
+                        <p class="mb-0">
+                            Hoje, o projeto foi totalmente remodelado. Substituímos a estrutura legada por um ecossistema robusto em Python, otimizando a performance e a precisão das análises. A transição permitiu tratar dados de forma analítica, lidando com inconsistências e valores nulos de maneira estatística, algo que no sistema anterior era processado de forma manual e limitada.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 5: PROJETO MEMORIZE (CARROSSEL DE FOTOS) -->
+    <div class="modal fade" id="modalMemorize" tabindex="-1" aria-labelledby="modalMemorizeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content border-0">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold text-emerald" id="modalMemorizeLabel">
+                        <i class="fa-solid fa-brain me-2"></i> Projeto Memorize — Flashcards Desktop
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-4">
+                    
+                    <!-- Carrossel de Fotos Bootstrap -->
+                    <div id="carouselMemorize" class="carousel slide mb-4" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselMemorize" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselMemorize" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselMemorize" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner rounded-3">
+                            <div class="carousel-item active">
+                                <img src="assets/img/projects/projeto_memorize/inicio_java.jfif" class="d-block w-100 modal-carousel-img" alt="Memorize Início">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/projects/projeto_memorize/lobby_java.jfif" class="d-block w-100 modal-carousel-img" alt="Memorize Lobby">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/img/projects/projeto_memorize/update_java.jfif" class="d-block w-100 modal-carousel-img" alt="Memorize Update">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMemorize" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselMemorize" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+
+                    <div class="project-details-text">
+                        <p class="lead">
+                            O <strong>Projeto Memorize</strong> é uma aplicação desktop desenvolvida em <strong>Java</strong> para auxiliar na memorização e organização de informações através de cartões digitais (flashcards).
+                        </p>
+                        <p class="mb-0">
+                            Este projeto demonstra a aplicação de conceitos de <strong>Programação Orientada a Objetos (POO)</strong> e o desenvolvimento de interfaces gráficas robustas com Swing para o ambiente Windows.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4 mt-5 text-center text-muted border-top">
+        <div class="container">
+            <p class="mb-0 small">&copy; 2026 Wesley Samuel Ferreira Rodrigues. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS & Canvas Game JS -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/game.js"></script>
+</body>
+</html>
