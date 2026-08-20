@@ -46,13 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('shown.bs.tab', () => {
             const mainContent = document.querySelector('.main-content');
             if (mainContent) {
-                const headerOffset = 20;
-                const elementPosition = mainContent.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                const headerElem = document.querySelector('header.header-fixed');
+                const isMobile = window.innerWidth <= 768;
+                const headerHeight = (headerElem && !isMobile) ? headerElem.offsetHeight : 15;
+                const targetScrollTop = isMobile ? 0 : Math.max(0, offsetPosition);
 
                 // Realiza a rolagem suave até o início do conteúdo da aba selecionada
                 window.scrollTo({
-                    top: offsetPosition,
+                    top: targetScrollTop,
                     behavior: 'smooth'
                 });
             }
@@ -111,6 +112,27 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // =========================================================================
+    // 6. GERENCIADOR DO MODAL DE JOGO EXCLUSIVO PARA CELULAR
+    // =========================================================================
+    const mobileGameModal = document.getElementById('modalGameMobile');
+    const inlineGameSlot = document.getElementById('gameContainerSlot');
+    const modalGameSlot = document.getElementById('gameSlotModal');
+
+    if (mobileGameModal && inlineGameSlot && modalGameSlot) {
+        mobileGameModal.addEventListener('show.bs.modal', () => {
+            while (inlineGameSlot.firstChild) {
+                modalGameSlot.appendChild(inlineGameSlot.firstChild);
+            }
+        });
+
+        mobileGameModal.addEventListener('hidden.bs.modal', () => {
+            while (modalGameSlot.firstChild) {
+                inlineGameSlot.appendChild(modalGameSlot.firstChild);
+            }
+        });
+    }
 
     // Log institucional no console do desenvolvedor
     console.log(

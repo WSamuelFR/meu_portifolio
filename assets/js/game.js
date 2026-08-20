@@ -318,32 +318,48 @@ class RooftopCatGame {
      * Associa os eventos de teclado, toque e cliques dos botões da interface.
      */
     bindControls() {
-        const handleJump = (e) => {
-            if (e.type === 'keydown') {
-                if (['Space', 'ArrowUp', 'KeyW'].includes(e.code)) {
-                    e.preventDefault();
-                    if (this.state === 'PLAYING') {
-                        this.jump();
-                    } else if (this.state === 'START' || this.state === 'GAMEOVER') {
-                        this.startGame();
-                    }
-                }
-            } else if (e.type === 'touchstart' || e.type === 'mousedown') {
-                if (this.state === 'PLAYING') {
-                    this.jump();
-                }
+        // Desbloqueio global de áudio no primeiro toque/clique em telas sensíveis ao toque (iOS/Android)
+        const unlockAudio = () => {
+            this.initAudio();
+            window.removeEventListener('touchstart', unlockAudio);
+            window.removeEventListener('touchend', unlockAudio);
+            window.removeEventListener('click', unlockAudio);
+        };
+        window.addEventListener('touchstart', unlockAudio, { passive: true });
+        window.addEventListener('touchend', unlockAudio, { passive: true });
+        window.addEventListener('click', unlockAudio, { passive: true });
+
+        const handleAction = () => {
+            this.initAudio();
+            if (this.state === 'PLAYING') {
+                this.jump();
+            } else if (this.state === 'START' || this.state === 'GAMEOVER') {
+                this.startGame();
             }
         };
 
-        // Eventos Globais de Teclado e Toque no Canvas
-        window.addEventListener('keydown', handleJump);
+        // Eventos Globais de Teclado
+        window.addEventListener('keydown', (e) => {
+            if (['Space', 'ArrowUp', 'KeyW'].includes(e.code)) {
+                e.preventDefault();
+                handleAction();
+            }
+        });
+
+        // Eventos de Clique / Toque no Canvas
         this.canvas.addEventListener('mousedown', (e) => {
-            if (this.state === 'PLAYING') this.jump();
-        });
-        this.canvas.addEventListener('touchstart', (e) => {
             e.preventDefault();
-            if (this.state === 'PLAYING') this.jump();
+            handleAction();
         });
+
+        let lastTouchTime = 0;
+        this.canvas.addEventListener('touchstart', (e) => {
+            if (e.cancelable) e.preventDefault();
+            const now = Date.now();
+            if (now - lastTouchTime < 50) return; // Evita disparo duplo
+            lastTouchTime = now;
+            handleAction();
+        }, { passive: false });
 
         // Botões de Interface HTML
         const startBtn = document.getElementById('startGameBtn');
@@ -352,20 +368,57 @@ class RooftopCatGame {
         const hudSoundBtn = document.getElementById('hudSoundBtn');
         const overlaySoundBtn = document.getElementById('overlaySoundBtn');
 
-        if (startBtn) startBtn.addEventListener('click', () => this.startGame());
-        if (restartBtn) restartBtn.addEventListener('click', () => this.startGame());
-        if (mobileJumpBtn) mobileJumpBtn.addEventListener('click', () => {
-            if (this.state === 'PLAYING') this.jump();
-            else if (this.state === 'START' || this.state === 'GAMEOVER') this.startGame();
-        });
-        if (hudSoundBtn) hudSoundBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            this.toggleSound();
-        });
-        if (overlaySoundBtn) overlaySoundBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            this.toggleSound();
-        });
+        if (startBtn) {
+            startBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.startGame();
+            });
+        }
+
+        if (restartBtn) {
+            restartBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.startGame();
+            });
+        }
+
+        if (mobileJumpBtn) {
+            let lastJumpTouch = 0;
+            mobileJumpBtn.addEventListener('touchstart', (e) => {
+                if (e.cancelable) e.preventDefault();
+                const now = Date.now();
+                if (now - lastJumpTouch < 50) return;
+                lastJumpTouch = now;
+                handleAction();
+            }, { passive: false });
+
+            mobileJumpBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const now = Date.now();
+                if (now - lastJumpTouch < 300) return; // Ignora clique sintetizado se touchstart já disparou
+                handleAction();
+            });
+        }
+
+        if (hudSoundBtn) {
+            hudSoundBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.toggleSound();
+            });
+            hudSoundBtn.addEventListener('touchstart', (e) => {
+                e.stopPropagation();
+            }, { passive: true });
+        }
+
+        if (overlaySoundBtn) {
+            overlaySoundBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.toggleSound();
+            });
+            overlaySoundBtn.addEventListener('touchstart', (e) => {
+                e.stopPropagation();
+            }, { passive: true });
+        }
     }
 
     /**
