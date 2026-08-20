@@ -1,0 +1,150 @@
+/* ==========================================================================
+   ESTILOS DO JOGO - TELHADO FELINO (ROOFTOP CAT RUNNER)
+   Estilização Exclusiva do Canvas, HUD e Menus de Overlay
+   ========================================================================== */
+
+/* Container Principal do Card do Jogo */
+.game-container-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+/* Moldura e Wrapper Responsivo do Canvas */
+.game-canvas-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #0f172a; /* Céu Azul Meia-Noite */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6), 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--border-color);
+}
+
+/* Elemento HTML5 Canvas */
+#gameCanvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to bottom, #090d16 0%, #1e293b 70%, #0f172a 100%);
+    cursor: pointer;
+}
+
+/* Painel Superior de Informações (HUD) */
+.game-hud {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    right: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Indicador de Vidas (Corações) */
+.hud-lives {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(8px);
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ef4444;
+    font-size: 1.1rem;
+}
+
+/* Caixa de Pontuação e Velocidade */
+.hud-score-box {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(8px);
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    pointer-events: auto;
+}
+
+.hud-sound-btn {
+    pointer-events: auto;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    transition: all 0.2s ease;
+}
+
+.hud-sound-btn:hover {
+    background: var(--emerald-primary) !important;
+    border-color: var(--emerald-primary) !important;
+    color: #ffffff !important;
+}
+
+.hud-score-num {
+    color: var(--emerald-primary);
+}
+
+/* Telas Sobrepostas de Início / Game Over / Pausa */
+.game-overlay-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.88);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    transition: opacity 0.3s ease;
+}
+
+.game-overlay-screen.hidden {
+    display: none !important;
+}
+
+/* Título em Gradiente na Tela de Início */
+.game-title-text {
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+}
+
+/* Badges Informativas de Regras do Jogo */
+.game-instruction-badge {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+/* Botão de Pulo para Dispositivos Móveis */
+.mobile-jump-btn {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .mobile-jump-btn {
+        display: block;
+    }
+}
