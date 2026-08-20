@@ -29,17 +29,16 @@ projeto_portifolio/
 │   │   ├── style.css            # Design System global, variáveis e modais
 │   │   └── game.css             # Estilização do Canvas, HUD e overlays do jogo
 │   ├── js/
-│   │   ├── script.js            # Engine de tema, abas, modais e auto-pause de vídeo
-│   │   └── game.js              # Motor gráfico 2D, física e loop do jogo
+│   │   ├── script.js            # Engine de tema, abas, modais e efeitos
+│   │   └── game.js              # Motor gráfico 2D, física, som e loop do jogo
 │   ├── img/
 │   │   ├── meus_dados.jpg       # Banner institucional do cabeçalho
 │   │   └── projects/            # Imagens organizadas por estudos de caso
+│   │       ├── ws_hotelaria/    # Captura de tela do ERP WS-Hotelaria
 │   │       ├── feel.it/         # Capturas de tela do projeto feel.it
 │   │       ├── movies/          # Gráficos e telas do Movie Analytics Pro
 │   │       ├── payguardian/     # Interfaces do PayGuardian Mobile
 │   │       └── projeto_memorize/# Telas da aplicação Java Memorize
-│   ├── video/
-│   │   └── wshotelaria.mp4      # Vídeo de demonstração do ERP WS-Hotelaria
 │   └── docs/
 │       └── curriculo_samuel.pdf # Documento executivo em formato PDF
 └── screenshots/                 # Capturas institucionais do portfólio
@@ -52,7 +51,7 @@ projeto_portifolio/
 Os projetos estão estruturados com um **Card Destaque Flagship** no topo e uma grade simétrica dos 4 demais projetos alinhados abaixo. Cada card dispara um **Modal Bootstrap 5** com documentação detalhada:
 
 1. **WS-Hotelaria (ERP Hoteleiro em Produção)**:
-   - **Mídia**: Prévia em vídeo executando direto no card destaque (`<video autoplay loop muted>`) e Player HTML5 completo no modal (`assets/video/wshotelaria.mp4`).
+   - **Mídia**: Imagem demonstrativa em alta definição (`assets/img/projects/ws_hotelaria/image.png`) sem cortes.
    - **Descrição**: ERP em produção há quase 1 ano para a pousada familiar (200+ cadastros, controle financeiro, check-in/out, logs, PHP, MySQL, Bootstrap) e futuro roadmap SaaS com Laravel e Vue.js.
 
 2. **feel.it (Rede Social de Expressão Emocional)**:
