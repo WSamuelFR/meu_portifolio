@@ -21,6 +21,10 @@
     overflow: hidden;
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.6), 0 10px 25px rgba(0, 0, 0, 0.3);
     border: 2px solid var(--border-color);
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Elemento HTML5 Canvas */
@@ -30,19 +34,23 @@
     height: auto;
     background: linear-gradient(to bottom, #090d16 0%, #1e293b 70%, #0f172a 100%);
     cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Painel Superior de Informações (HUD) */
 .game-hud {
     position: absolute;
-    top: 12px;
-    left: 16px;
-    right: 16px;
+    top: 10px;
+    left: 12px;
+    right: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     pointer-events: none;
     z-index: 10;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 /* Indicador de Vidas (Corações) */
@@ -50,26 +58,27 @@
     display: flex;
     align-items: center;
     gap: 4px;
-    background: rgba(15, 23, 42, 0.75);
+    background: rgba(15, 23, 42, 0.85);
     backdrop-filter: blur(8px);
-    padding: 6px 14px;
+    padding: 5px 12px;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     color: #ef4444;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 /* Caixa de Pontuação e Velocidade */
 .hud-score-box {
-    background: rgba(15, 23, 42, 0.75);
+    background: rgba(15, 23, 42, 0.85);
     backdrop-filter: blur(8px);
-    padding: 6px 16px;
+    padding: 5px 14px;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     color: #ffffff;
     font-family: var(--font-heading);
     font-weight: 700;
     pointer-events: auto;
+    font-size: 0.9rem;
 }
 
 .hud-sound-btn {
@@ -109,9 +118,11 @@
     justify-content: center;
     z-index: 20;
     text-align: center;
-    padding: 20px;
+    padding: 16px;
     color: #ffffff;
     transition: opacity 0.3s ease;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .game-overlay-screen.hidden {
@@ -141,10 +152,46 @@
 /* Botão de Pulo para Dispositivos Móveis */
 .mobile-jump-btn {
     display: none;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+#mobileJumpBtn {
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+#mobileJumpBtn:active {
+    transform: scale(0.96);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
 }
 
 @media (max-width: 767.98px) {
     .mobile-jump-btn {
         display: block;
     }
+
+    .game-title-text {
+        font-size: 1.6rem;
+    }
+
+    .game-instruction-badge {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+
+    .hud-lives {
+        padding: 4px 10px;
+        font-size: 0.9rem;
+    }
+
+    .hud-score-box {
+        padding: 4px 10px;
+        font-size: 0.8rem;
+    }
 }
+

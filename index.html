@@ -2,8 +2,11 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <title>Wesley Samuel | Desenvolvedor Full Stack Júnior</title>
+    
+    <!-- Favicon SVG Integrado -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐱</text></svg>">
     
     <!-- Google Fonts: Inter & Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,54 +25,54 @@
 </head>
 <body>
 
-    <!-- Header Sticky Topo (Com Imagem Banner Meus Dados + Botões de Abas) -->
-    <header class="sticky-top header-fixed shadow-sm py-2">
+    <!-- Header Topo (Banner Meus Dados) -->
+    <header class="header-fixed shadow-sm py-2">
         <div class="container">
-            
             <!-- Imagem Meus Dados (Banner no Topo do Header) -->
-            <div class="header-banner-wrapper mb-2">
+            <div class="header-banner-wrapper">
                 <img src="assets/img/meus_dados.jpg" alt="Wesley Samuel Ferreira Rodrigues - Meus Dados" class="header-banner-img img-fluid">
             </div>
-
-            <!-- Botões de Alternar Abas (Integrados no Header Fixo) -->
-            <div class="nav-tabs-wrapper max-w-650 mx-auto">
-                <ul class="nav nav-pills nav-justified gap-1 p-1 rounded-4 header-tabs-pill" id="portfolioTabs" role="tablist">
-                    
-                    <!-- ABA 1: APRESENTAÇÃO & SOLUÇÕES -->
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active py-2 px-2 rounded-3 fw-semibold d-flex align-items-center justify-content-center gap-2" 
-                                id="presentation-tab" data-bs-toggle="tab" data-bs-target="#presentation-pane" 
-                                type="button" role="tab" aria-controls="presentation-pane" aria-selected="true">
-                            <i class="fa-solid fa-user-gear fs-6"></i>
-                            <span>Apresentação & Soluções</span>
-                        </button>
-                    </li>
-
-                    <!-- ABA 2: MEUS PROJETOS & GAME -->
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link py-2 px-2 rounded-3 fw-semibold d-flex align-items-center justify-content-center gap-2" 
-                                id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-pane" 
-                                type="button" role="tab" aria-controls="projects-pane" aria-selected="false">
-                            <i class="fa-solid fa-gamepad fs-6"></i>
-                            <span>Meus Projetos & Game</span>
-                        </button>
-                    </li>
-
-                    <!-- ABA 3: CURRÍCULO -->
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link py-2 px-2 rounded-3 fw-semibold d-flex align-items-center justify-content-center gap-2" 
-                                id="curriculum-tab" data-bs-toggle="tab" data-bs-target="#curriculum-pane" 
-                                type="button" role="tab" aria-controls="curriculum-pane" aria-selected="false">
-                            <i class="fa-solid fa-file-contract fs-6"></i>
-                            <span>Currículo</span>
-                        </button>
-                    </li>
-
-                </ul>
-            </div>
-
         </div>
     </header>
+
+    <!-- Barra de Navegação por Abas (Desktop: Sub-header / Mobile: Barra Fixa Estilo Instagram no Rodapé) -->
+    <nav class="nav-tabs-wrapper max-w-650 mx-auto py-2">
+        <div class="container">
+            <ul class="nav nav-pills nav-justified gap-1 p-1 rounded-4 header-tabs-pill" id="portfolioTabs" role="tablist">
+                
+                <!-- ABA 1: APRESENTAÇÃO & SOLUÇÕES -->
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active py-2 px-2 rounded-3 fw-semibold d-flex align-items-center justify-content-center gap-2" 
+                            id="presentation-tab" data-bs-toggle="tab" data-bs-target="#presentation-pane" 
+                            type="button" role="tab" aria-controls="presentation-pane" aria-selected="true">
+                        <i class="fa-solid fa-user-gear fs-6"></i>
+                        <span>Apresentação & Soluções</span>
+                    </button>
+                </li>
+
+                <!-- ABA 2: MEUS PROJETOS & GAME -->
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link py-2 px-2 rounded-3 fw-semibold d-flex align-items-center justify-content-center gap-2" 
+                            id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-pane" 
+                            type="button" role="tab" aria-controls="projects-pane" aria-selected="false">
+                        <i class="fa-solid fa-gamepad fs-6"></i>
+                        <span>Meus Projetos & Game</span>
+                    </button>
+                </li>
+
+                <!-- ABA 3: CURRÍCULO -->
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link py-2 px-2 rounded-3 fw-semibold d-flex align-items-center justify-content-center gap-2" 
+                            id="curriculum-tab" data-bs-toggle="tab" data-bs-target="#curriculum-pane" 
+                            type="button" role="tab" aria-controls="curriculum-pane" aria-selected="false">
+                        <i class="fa-solid fa-file-contract fs-6"></i>
+                        <span>Currículo</span>
+                    </button>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
 
     <!-- Main Content Wrapper with Offset for Combined Header -->
     <main class="main-content container py-4">
@@ -274,56 +277,68 @@
                             <span class="badge bg-emerald px-3 py-2 rounded-pill fw-bold">60 FPS Endless Runner</span>
                         </div>
 
-                        <!-- Canvas Wrapper -->
-                        <div class="game-canvas-wrapper my-4">
-                            
-                            <!-- HUD Header -->
-                            <div class="game-hud">
-                                <div class="hud-lives" id="hudLivesContainer">
-                                    <!-- Dynamic Hearts -->
-                                </div>
-                                <div class="hud-score-box d-flex align-items-center gap-3">
-                                    <div>
-                                        SCORE: <span class="hud-score-num" id="hudScoreNum">0</span> | VELOCIDADE: <span class="hud-score-num" id="hudSpeedNum">1.0x</span>
-                                    </div>
-                                    <button class="btn btn-sm btn-outline-light rounded-circle hud-sound-btn" id="hudSoundBtn" title="Ativar/Desativar Som">
-                                        <i class="fa-solid fa-volume-high"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Overlay Screens (Start / GameOver) -->
-                            <div class="game-overlay-screen" id="gameOverlayScreen">
-                                <h3 class="game-title-text" id="overlayTitle">TELHADO FELINO</h3>
-                                <div class="mb-4 text-center max-w-700" id="overlayMessage">
-                                    <p class="lead mb-2">Ajude o gato a correr pelos telhados da cidade!</p>
-                                    <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
-                                        <span class="game-instruction-badge"><i class="fa-solid fa-heart me-1 text-danger"></i> 7 Vidas</span>
-                                        <span class="game-instruction-badge"><i class="fa-solid fa-bolt me-1 text-warning"></i> +Velocidade a cada 500pts</span>
-                                        <span class="game-instruction-badge"><i class="fa-solid fa-dove me-1 text-info"></i> Pombo = +1 Vida</span>
-                                    </div>
-                                    <p class="small text-muted mb-0">Evite antenas (📡), chaminés (🏭), falcões (🦅) e cobras (🐍). Não caia nos vãos dos prédios!</p>
-                                </div>
-
-                                <div class="d-flex flex-column align-items-center gap-3">
-                                    <button class="btn btn-emerald btn-lg px-5 py-3 rounded-pill fw-bold shadow hover-lift" id="startGameBtn">
-                                        <i class="fa-solid fa-play me-2"></i> INICIAR JOGO
-                                    </button>
-                                    <button class="btn btn-sm btn-outline-light rounded-pill px-4 py-2 opacity-85" id="overlaySoundBtn">
-                                        <i class="fa-solid fa-volume-high me-2" id="overlaySoundIcon"></i> <span id="overlaySoundText">SOM: LIGADO</span>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- Game Canvas -->
-                            <canvas id="gameCanvas"></canvas>
+                        <!-- Botão de Abertura do Modal de Jogo Exclusivo para Celular -->
+                        <div class="d-md-none text-center mb-3">
+                            <button class="btn btn-emerald btn-lg w-100 py-3 rounded-4 fw-bold fs-5 shadow d-flex align-items-center justify-content-center gap-2" 
+                                    id="openMobileGameModalBtn" data-bs-toggle="modal" data-bs-target="#modalGameMobile">
+                                <i class="fa-solid fa-gamepad fs-3"></i>
+                                <span>JOGAR EM TELA CHEIA (MODAL)</span>
+                            </button>
                         </div>
 
-                        <!-- Touch / Mobile Jump Control -->
-                        <div class="text-center mobile-jump-btn mt-3">
-                            <button class="btn btn-emerald btn-lg w-100 py-3 rounded-4 fw-bold fs-4" id="mobileJumpBtn">
-                                <i class="fa-solid fa-arrow-up me-2"></i> TOCAR PARA PULAR
-                            </button>
+                        <!-- Slot do Jogo (No Desktop exibe inline, no Celular fica oculto na página e roda dentro do Modal) -->
+                        <div id="gameContainerSlot" class="d-none d-md-block">
+                            <!-- Canvas Wrapper -->
+                            <div class="game-canvas-wrapper my-4">
+                                
+                                <!-- HUD Header -->
+                                <div class="game-hud">
+                                    <div class="hud-lives" id="hudLivesContainer">
+                                        <!-- Dynamic Hearts -->
+                                    </div>
+                                    <div class="hud-score-box d-flex align-items-center gap-3">
+                                        <div>
+                                            SCORE: <span class="hud-score-num" id="hudScoreNum">0</span> | VELOCIDADE: <span class="hud-score-num" id="hudSpeedNum">1.0x</span>
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-light rounded-circle hud-sound-btn" id="hudSoundBtn" title="Ativar/Desativar Som">
+                                            <i class="fa-solid fa-volume-high"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Overlay Screens (Start / GameOver) -->
+                                <div class="game-overlay-screen" id="gameOverlayScreen">
+                                    <h3 class="game-title-text" id="overlayTitle">TELHADO FELINO</h3>
+                                    <div class="mb-4 text-center max-w-700" id="overlayMessage">
+                                        <p class="lead mb-2">Ajude o gato a correr pelos telhados da cidade!</p>
+                                        <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+                                            <span class="game-instruction-badge"><i class="fa-solid fa-heart me-1 text-danger"></i> 7 Vidas</span>
+                                            <span class="game-instruction-badge"><i class="fa-solid fa-bolt me-1 text-warning"></i> +Velocidade a cada 500pts</span>
+                                            <span class="game-instruction-badge"><i class="fa-solid fa-dove me-1 text-info"></i> Pombo = +1 Vida</span>
+                                        </div>
+                                        <p class="small text-muted mb-0">Evite antenas (📡), chaminés (🏭), falcões (🦅) e cobras (🐍). Não caia nos vãos dos prédios!</p>
+                                    </div>
+
+                                    <div class="d-flex flex-column align-items-center gap-3">
+                                        <button class="btn btn-emerald btn-lg px-5 py-3 rounded-pill fw-bold shadow hover-lift" id="startGameBtn">
+                                            <i class="fa-solid fa-play me-2"></i> INICIAR JOGO
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-light rounded-pill px-4 py-2 opacity-85" id="overlaySoundBtn">
+                                            <i class="fa-solid fa-volume-high me-2" id="overlaySoundIcon"></i> <span id="overlaySoundText">SOM: LIGADO</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Game Canvas -->
+                                <canvas id="gameCanvas"></canvas>
+                            </div>
+
+                            <!-- Touch / Mobile Jump Control -->
+                            <div class="text-center mobile-jump-btn mt-3">
+                                <button class="btn btn-emerald btn-lg w-100 py-3 rounded-4 fw-bold fs-4" id="mobileJumpBtn">
+                                    <i class="fa-solid fa-arrow-up me-2"></i> TOCAR PARA PULAR
+                                </button>
+                            </div>
                         </div>
 
                         <!-- Game Controls Footer Legend -->
@@ -332,7 +347,7 @@
                                 <strong>Controles Computador:</strong> Pressione <kbd>Espaço</kbd>, <kbd>Seta Cima</kbd> ou <kbd>W</kbd> para Pular / Pulo Duplo.
                             </div>
                             <div>
-                                <strong>Controles Celular:</strong> Toque em qualquer área do jogo ou no botão de pulo.
+                                <strong>Controles Celular:</strong> Toque na tela ou no botão de pulo.
                             </div>
                         </div>
 
@@ -932,6 +947,28 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE JOGO EXCLUSIVO PARA DISPOSITIVOS MÓVEIS (COMPACTO & RESPONSIVO) -->
+    <div class="modal fade" id="modalGameMobile" tabindex="-1" aria-labelledby="modalGameMobileLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered px-2 my-2">
+            <div class="modal-content border-0 bg-dark text-white shadow-lg rounded-4 overflow-hidden">
+                <div class="modal-header border-secondary py-2 px-3 d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-cat text-emerald fs-4"></i>
+                        <h5 class="modal-title fw-bold text-gradient mb-0" id="modalGameMobileLabel">TELHADO FELINO 🐱</h5>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar Modal"></button>
+                </div>
+                <div class="modal-body p-2 p-md-4 d-flex flex-column align-items-center justify-content-center" id="gameSlotModal">
+                    <!-- O container do jogo será relocado para cá dinamicamente no celular -->
+                </div>
+                <div class="modal-footer border-secondary py-2 px-3 d-flex justify-content-between align-items-center">
+                    <span class="small text-muted"><i class="fa-solid fa-hand-pointer me-1 text-emerald"></i> Toque na tela ou no botão para Pular</span>
+                    <button type="button" class="btn btn-sm btn-outline-light rounded-pill px-3" data-bs-dismiss="modal">Sair do Jogo</button>
                 </div>
             </div>
         </div>
