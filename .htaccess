@@ -5,10 +5,15 @@
 # ==============================================================================
 
 # ------------------------------------------------------------------------------
-# 1. Configurações Base e Codificação de Caracteres
+# 1. Configurações Base, MIME Types e Codificação
 # ------------------------------------------------------------------------------
 AddDefaultCharset UTF-8
 DirectoryIndex index.html index.php
+
+# Define tipos MIME explícitos para vídeos e mídias no InfinityFree
+AddType video/mp4 .mp4 .m4v
+AddType video/webm .webm
+AddType image/svg+xml .svg
 
 # Desativa a listagem de arquivos e diretórios por segurança
 Options -Indexes
