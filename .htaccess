@@ -1,0 +1,17 @@
+# Ensure UTF-8 encoding
+AddDefaultCharset UTF-8
+
+# Set default landing page
+DirectoryIndex index.php
+
+# Prevent directory listing
+Options -Indexes
+
+# (Optional) Remove .php extension from URLs
+# RewriteEngine On
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME}.php -f
+# RewriteRule ^(.*)$ $1.php [NC,L]
+
+# Custom Error Pages (if needed)
+# ErrorDocument 404 /index.php
